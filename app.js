@@ -1,19 +1,27 @@
 // My SocketStream 0.3 app
 
 var http = require('http'),
-    ss = require('socketstream');
+	ss = require('socketstream');
 
 // Define a single-page client called 'main'
 ss.client.define('main', {
-  view: 'app.jade',
-  css:  ['libs/reset.css', 'app.styl'],
-  code: ['libs/jquery.min.js', 'app'],
-  tmpl: '*'
+	view: 'app.jade',
+	css: [
+		'libs/reset.css',
+		'app.styl'
+	],
+	code: [
+		'libs/jquery-1.8.3.min.js',
+		'libs/angular-1.0.2.min.js',
+		'libs/plugins.js',
+		'app'
+	],
+	tmpl: '*'
 });
 
 // Serve this client on the root URL
 ss.http.route('/', function(req, res){
-  res.serveClient('main');
+	res.serveClient('main');
 });
 
 // Code Formatters
