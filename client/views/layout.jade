@@ -1,0 +1,33 @@
+!!! 5
+html(lang="en", ng-app="app", ng-controller="AppCtrl")
+  head
+
+    // this imports the whole minified js/css in client/code/libs+app, client/code/css
+    != SocketStream
+
+    meta(charset="utf-8")
+    block title
+      title SocketStream / AngularJS / Twitter Bootstrap Demo
+    meta(name="viewport", content="width=device-width,initial-scale=1.0")
+    meta(name="description", content="todo")
+    meta(name="author", content="todo")
+
+    // if lt IE 9
+      script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+    link(rel="shortcut icon", href="ico/favicon.ico")
+    link(rel="apple-touch-icon-precomposed", sizes="114x114", href="ico/apple-touch-icon-114-precomposed.png")
+    link(rel="apple-touch-icon-precomposed", sizes="72x72", href="ico/apple-touch-icon-72-precomposed.png")
+    link(rel="apple-touch-icon-precomposed", href="ico/apple-touch-icon-57-precomposed.png")
+
+  body
+    block content
+    // bootstrap modal pops up when websocket connection is lost
+    div.modal.hide.fade#warning
+      div.modal-header
+        h3 Connection Lost!
+      div.modal-body
+        p
+         | The connection to the server has been lost.
+      div.modal-footer
+    
