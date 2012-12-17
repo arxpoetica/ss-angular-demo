@@ -52,5 +52,8 @@ There's also an [example of shared middleware](https://github.com/americanyak/ss
 
 That piece of middleware will run if a client hits http://localhost:3000/demo and it will also run if they call `ss.rpc('demoRpc.get', function (err, resp) { });`
 
+# Credit Due
 
+* [@polidore](https://github.com/polidore/ss-angular) - the angular services in here that wrap socket stream `rpc` and `pubsub` were derived / borrowed from the ss-angular project
+* Pierre-Yves Gérardy for his [great ideas on setting up client side unit testing with SocketStream + AngularJS](https://groups.google.com/forum/#!topic/socketstream/jDDCkQJpsDM/discussion)
 
