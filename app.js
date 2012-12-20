@@ -25,7 +25,7 @@ ss.client.define('main', {
 });
 
 // pack / minify if product env
-if (ss.evn === 'production') {
+if (ss.env === 'production') {
   ss.client.packAssets();
 } else {
   // serve tests in non-production env
