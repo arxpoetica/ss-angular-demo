@@ -14,9 +14,6 @@ console.log(mw);
  */
 var route = (function () {
 
-  // socketstream obj
-  var ss;
-
   return {
 
     /**
@@ -28,6 +25,7 @@ var route = (function () {
      */
     init: function (app, ss) {
 
+      // socketstream obj
       this.ss = ss;
 
       // add standard express 3.0 routes here
